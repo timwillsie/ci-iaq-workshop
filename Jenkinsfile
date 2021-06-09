@@ -29,7 +29,7 @@ pipeline {
 
         stage('Run Testinfra Tests') {
             steps {
-              sh "py.test --connection=ansible --ansible-inventory inventory/test.hcloud.yml --hosts='ansible://ansible-test-instance' --force-ansible -v test/*.py"
+              sh "py.test --connection=ansible --ansible-inventory inventory/test.hcloud.yml --hosts='ansible://ansible-test-instance-ts' --force-ansible -v test/*.py"
             }
         }
     }
