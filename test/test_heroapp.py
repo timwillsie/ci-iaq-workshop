@@ -8,7 +8,7 @@ def test_docker_service_is_running(host):
 
 def test_heroapp_container_is_running(host):
     # testen, ob der container mit dem Namen "my-hero-app" läuft
-    assert host.docker.get_containers(name="my-hero-app").is_running
+    assert host.docker("my-hero-app").is_running
 
 
 def test_heroapp_is_available_on_port_80(host):
